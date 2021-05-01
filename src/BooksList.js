@@ -23,7 +23,6 @@ renderList = () => {
             <p>Opis: {book.description}</p>
             <p>Autor: {book.author}</p>
             <p>Cena: {book.prize}</p>
-            <iframe width="260" height="115" src= {book.url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </li>
     })

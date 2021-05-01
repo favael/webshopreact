@@ -1,4 +1,8 @@
 #book {
     background-color: powderblue;
+    width: 100%;
+}
+#picture{
     width: 50%;
+    height: 300px;
 }
