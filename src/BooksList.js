@@ -1,4 +1,5 @@
 import React from 'react';
+import './BooksList.css';
 
 class BooksList extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ renderList = () => {
 
     render() {
         return(
-            <div>
+            <div id = "book"> 
             <h1>Books list!</h1>
             <ul>
                 {this.renderList()}
