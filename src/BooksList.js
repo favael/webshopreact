@@ -22,7 +22,7 @@ renderList = () => {
             <p>Opis: {book.description}</p>
             <p>Autor: {book.author}</p>
             <p>Cena: {book.prize}</p>
-            <iframe width="1020" height="615"
+            <iframe width="420" height="200"
             src = {book.url}>
             </iframe>
 
