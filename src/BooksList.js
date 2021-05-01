@@ -8,7 +8,7 @@ class BooksList extends React.Component {
     }
 
 componentDidMount() {
-    fetch('https://dashboard.heroku.com/apps/favael-webshop/book')
+    fetch('https://favael-webshop.herokuapp.com/book')
     .then(response => response.json())
     .then(jsonResponse=> {
         this.setState({booksList: jsonResponse});
@@ -16,30 +16,37 @@ componentDidMount() {
 }
 
 renderList = () => {
-  return  this.state.booksList.map((book, index) => {
-        return <tr key = {index}>
-            
-            <td>{book.booksCategory}</td>
-            <td>{book.title}</td>
+  return  this.state.booksList.map((book) => {
+        return <tr>
+            <td >{book.booksCategory}</td>
+            <td>"{book.title}"</td>
             <td>{book.description}</td>
             <td>{book.author}</td>
-            <td>{book.prize}</td>
-            
-
+            <td>{book.prize} zł</td>
         </tr>
+            
     })
 }
 
     render() {
         return(
-            <div id = "book"> 
-            <h1>Books list!</h1>
+            <div id = "all"> 
             <table>
-               <tr> 
-                   {this.renderList()}
-                   </tr>
-            </table>
-            </div>
+                <tr>
+                <th>Kategoria</th>
+                <th>Tytuł</th>
+                <th>Opis</th>
+                <th>Autor</th>
+                <th>Cena</th>
+                </tr>
+               
+                                 
+                                     {this.renderList()}
+                                
+                          <caption>Dostępne ksiązki</caption>
+                    </table>
+                 </div>
+
         )
     }
 }
