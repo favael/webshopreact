@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import BooksList from './BooksList';
 import './index.css';
+import MainPageTest from './MainPageTest';
 import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <BooksList/>
+    <MainPageTest/>
   </React.StrictMode>,
   document.getElementById('root')
 );

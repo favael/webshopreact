@@ -8,7 +8,7 @@ class BooksList extends React.Component {
     }
 
 componentDidMount() {
-    fetch('https://favael-webshop.herokuapp.com/book')
+    fetch('http://localhost:8080/book')
     .then(response => response.json())
     .then(jsonResponse=> {
         this.setState({booksList: jsonResponse});
