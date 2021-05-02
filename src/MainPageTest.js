@@ -8,7 +8,7 @@ class MainPageTest extends React.Component {
     }
 
 componentDidMount() {
-    fetch('http://localhost:8080/book')
+    fetch('https://favael-webshop.herokuapp.com/book')
     .then(response => response.json())
     .then(jsonResponse=> {
         this.setState({booksList: jsonResponse});
