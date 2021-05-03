@@ -4,29 +4,51 @@ import './MainPageTest.css';
 class MainPageTest extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {booksList: []};
+        this.state = {chessBooks: [], dramatBooks: [], cooksBooks: []} 
+            
     }
 
+// componentDidMount() {
+//     fetch('http://localhost:8080/book/szachy')
+//     .then(response => response.json())
+//     .then(chessResponse=> {
+//         this.setState({chessBooks: chessResponse});
+//     })
+// }
 componentDidMount() {
-    fetch('https://favael-webshop.herokuapp.com/book')
-    .then(response => response.json())
-    .then(jsonResponse=> {
-        this.setState({booksList: jsonResponse});
-    })
+    Promise.all([fetch('http://localhost:8080/book/szachy'), fetch('http://localhost:8080/book/dramat'), fetch('http://localhost:8080/book/gotowanie')])
+
+      .then(([res1, res2, res3]) => { 
+         return Promise.all([res1.json(), res2.json(), res3.json()]) 
+      })
+      .then(([res1, res2, res3]) => {
+        this.setState({chessBooks: res1, dramatBooks: res2, cooksBooks: res3})
+      });
 }
 
-renderList = () => {
-  return  this.state.booksList.map((book) => {
-        return <tr>
-            <td >{book.booksCategory}</td>
-            <td>"{book.title}"</td>
-            <td>{book.description}</td>
-            <td>{book.author}</td>
-            <td>{book.prize} zł</td>
-        </tr>
-            
-    })
-}
+
+
+  renderChessList = () => {
+    return  this.state.chessBooks.map((book) => {
+          return <button>
+          <img src={book.url} alt={book.title} width = "180" height = "300"></img>
+          </button>
+      })
+  }
+  renderDramatList = () => {
+    return  this.state.dramatBooks.map((book) => {
+          return <button>
+          <img src={book.url} alt={book.title} width = "180" height = "300"></img>
+          </button>
+      })
+  }
+  renderCookList = () => {
+    return  this.state.cooksBooks.map((book) => {
+          return <button>
+          <img src={book.url} alt={book.title} width = "180" height = "300"></img>
+          </button>
+      })
+  }
 
     render() {
         return(
@@ -53,25 +75,13 @@ renderList = () => {
                 <div class="navbar">
                     <a href="#home">Home</a>
                     <a href="#news">News</a>
+
                             <div class="dropdown">
                                 <button class="dropbtn">Szachy
                                         <i class="fa fa-caret-down"></i>
                                 </button>
                                     <div class="dropdown-content">
-                                    <div id = "all"> 
-            <table>
-                <tr>
-                <th>Kategoria</th>
-                <th>Tytuł</th>
-                <th>Opis</th>
-                <th>Autor</th>
-                <th>Cena</th>
-                </tr>    
-                                     {this.renderList()}    
-                          <caption>Dostępne ksiązki</caption>
-                    </table>
-                 </div>
-                                    
+                                            {this.renderChessList()}                                        
                                     </div>
                             </div>
 
@@ -102,9 +112,7 @@ renderList = () => {
                                         <i class="fa fa-caret-down"></i>
                                 </button>
                                     <div class="dropdown-content">
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
+                                            {this.renderCookList()}                                        
                                     </div>
                             </div>
                             
@@ -127,6 +135,15 @@ renderList = () => {
                                         <a href="#">Link 1</a>
                                         <a href="#">Link 2</a>
                                         <a href="#">Link 3</a>
+                                    </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="dropbtn">Dramat
+                                        <i class="fa fa-caret-down"></i>
+                                </button>
+                                    <div class="dropdown-content">
+                                            {this.renderDramatList()}                                        
                                     </div>
                             </div>
 

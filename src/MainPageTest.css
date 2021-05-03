@@ -72,7 +72,7 @@
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
-    display: block;
+    display:flow-root;
   }
 
 
@@ -99,5 +99,9 @@ th, tr {
 width: 16.5%;
 text-align: center;
 }
- 
+
+form {
+  width: 100%;
+  text-align: center;
+}
  

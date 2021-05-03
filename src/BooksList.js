@@ -38,11 +38,8 @@ renderList = () => {
                 <th>Opis</th>
                 <th>Autor</th>
                 <th>Cena</th>
-                </tr>
-               
-                                 
-                                     {this.renderList()}
-                                
+                </tr>    
+                                     {this.renderList()}    
                           <caption>Dostępne ksiązki</caption>
                     </table>
                  </div>
