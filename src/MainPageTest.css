@@ -67,11 +67,12 @@
   
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: red;
   }
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
+    margin-left: 0;
     display:flow-root;
   }
 
@@ -104,4 +105,15 @@ form {
   width: 100%;
   text-align: center;
 }
+
+#buttonBook {
+  width:200px;
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin:0px auto;
+
+
+}
+
  
