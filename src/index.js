@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BooksList from './BooksList';
+import './style/reset.css';
 import './index.css';
-import MainPageTest from './MainPageTest';
+import MainPage from './MainPage';
 import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainPageTest/>
+    <MainPage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
