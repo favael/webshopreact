@@ -98,59 +98,59 @@ renderNav = () => {
           <div>
       
           <div class="dropdown">
-                                <button class="dropbtn">Szachy
-                                </button>
+                                <div class="dropbtn">Szachy
+                                </div>
                                     <div class="dropdown-content">
                                             {this.renderChessList()}                                        
                                     </div>
                             </div>
 
                             <div class="dropdown">
-                                <button class="dropbtn">Dramat
-                                </button>
+                                <div class="dropbtn">Dramat
+                                </div>
                                     <div class="dropdown-content">
                                             {this.renderDramatList()}                                        
                                     </div>
                             </div>
 
                             <div class="dropdown">
-                                <button class="dropbtn">Historia
-                                </button>
+                                <div class="dropbtn">Historia
+                                </div>
                                     <div class="dropdown-content">
                                             {this.renderHistoryBooksList()}                                        
                                     </div>
                             </div>
 
                             <div class="dropdown">
-                                <button class="dropbtn">Gotowanie
-                                </button>
+                                <div class="dropbtn">Gotowanie
+                                </div>
                                     <div class="dropdown-content">
                                             {this.renderCookList()}                                        
                                     </div>
                             </div>
                             
                             <div class="dropdown">
-                                <button class="dropbtn">Romans
+                                <div class="dropbtn">Romans
                                         <i class="fa fa-caret-down"></i>
-                                </button>
+                                </div>
                                     <div class="dropdown-content">
                                             {this.renderRomansBooksList()}                                        
                                     </div>
                             </div>
 
                             <div class="dropdown">
-                                <button class="dropbtn">Sci-Fi
+                                <div class="dropbtn">Sci-Fi
                                         <i class="fa fa-caret-down"></i>
-                                </button>
+                                </div>
                                     <div class="dropdown-content">
                                             {this.renderScfiBooksList()}                                        
                                     </div>
                             </div>
 
                             <div class="dropdown">
-                                <button class="dropbtn">Dramat
+                                <div class="dropbtn">Dramat
                                         <i class="fa fa-caret-down"></i>
-                                </button>
+                                </div>
                                     <div class="dropdown-content">
                                             {this.renderDramatList()}                                        
                                     </div>
@@ -163,17 +163,11 @@ renderNav = () => {
     render() {
         return( <div class = "all">
                   <div class ="header-bloked">
-                    <div class = "header">
-                          {this.renderUpNav()}              
-                    </div>
-                    <div class = "header-text">
-                          {this.renderHeader()}
-                    </div>
-                    <div class = "navbar">
-                          {this.renderNav()}
-                    </div>
-                    </div>
-                    </div>
+                    <div class = "header">{this.renderUpNav()} </div>
+                    <div class = "header-text">{this.renderHeader()}</div>
+                    <div class = "navbar">{this.renderNav()}</div>
+                  </div>
+                </div>
 
                               
         )
