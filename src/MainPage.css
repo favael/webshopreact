@@ -1,6 +1,7 @@
 .all {
     width: 800px;
-    margin: auto;
+    margin-right:  auto;
+    margin-left:auto;
 }
 .test {
     margin-top: 20%;
@@ -41,7 +42,7 @@ nav {
     background: #1abc9c;
     color: white;
     font-size: 4vw;
-    padding: 6% 3% 4% 4%    
+    padding: 8% 3% 4% 4%    
 }
 /* Navbar container */
 
