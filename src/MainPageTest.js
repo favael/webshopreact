@@ -124,56 +124,41 @@ componentDidMount() {
                             <div class="dropdown">
                                 <button class="dropbtn">Szachy 
                                 </button>
-                                    <div class="dropdown-content">
-                                   
-                                    </div>
+                                
                             </div>
 
                             <div class="dropdown">
                                 <button class="dropbtn">Dramat
                                 </button>
-                                    <div class="dropdown-content">                               
-                                    </div>
+                                                                 
+                                  
                             </div>
 
                             <div class="dropdown">
                                 <button class="dropbtn">Historia
                                 </button>
-                                    <div class="dropdown-content">
-                                      
-                                    </div>
                             </div>
 
                             <div class="dropdown">
                                 <button class="dropbtn">Gotowanie
                                 </button>
-                                    <div class="dropdown-content">
-                                    
-                                    </div>
                             </div>
                             
                             <div class="dropdown">
                                 <button class="dropbtn">Romans
                                 </button>
-                                    <div class="dropdown-content">
-                                    
-                                    </div>
                             </div>
 
                             <div class="dropdown">
                                 <button class="dropbtn">Sci-Fi
                                 </button>
-                                    <div class="dropdown-content">
-                                
-                                    </div>
                             </div>
 
                             <div class="dropdown">
                                 <button class="dropbtn">Dramat
                                 </button>
-                                    <div class="dropdown-content">
-                                      
-                                    </div>
+                                  
+                                    
                             </div>
                             </div>
                             <div class = "result"> 
