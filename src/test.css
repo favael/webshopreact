@@ -1,35 +1,28 @@
-.header-text {
-    padding: 60px;
-    text-align: center;
-    background: white;
-    color: black;
-    font-size: 30px;
-}
+
 /* Navbar container */
-.navbar {
+.main {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
+    
   }
   
   /* Links inside the navbar */
-  .navbar a {
+  .main  {
     float: left;
     font-size: 16px;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  /* The dropdown container */
-  .dropdown {
     float: left;
     overflow: hidden;
   }
   
+ 
+  
   /* Dropdown button */
-  .dropdown .dropbtn {
+  .main .element {
     font-size: 16px;
     border: none;
     outline: none;
@@ -41,63 +34,39 @@
   }
   
   /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
+  nav a:hover,  .element {
     background-color: red;
   }
   
   /* Dropdown content (hidden by default) */
-  /* .result {
+  .element{
     display: none;
-    position:absolute;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-
-    
-  } */
+  }
   
-  
-  
+  /* Links inside the dropdown */
+  .element a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
   
   /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
+  .element a:hover {
     background-color: #ddd;
   }
   
   /* Show the dropdown menu on hover */
-  .dropdown:hover .result
-  {
-
+  main a:hover  {
+    margin-left: 0;
     display:flow-root;
   }
+
  
-
-#page 
-{
-  width: 1000px;
-  height: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px black solid;
-  background-color: lightslategrey;
-}
-
-.result
-{
-  width: 756px;
-  height: 477px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: khaki;
-  display: block;
-}
- 
-.buttonBook > button
-{
-  padding-right: 2px;
-  padding-bottom: 2px;
-
-}
-
-.buttonBook p
-{
-font-size: 10px;
-}
