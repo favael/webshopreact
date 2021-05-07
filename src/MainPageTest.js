@@ -101,15 +101,10 @@ componentDidMount() {
             <div id = "page"> 
             
                 <div class = "navbar">
-                    <div class = "dropbtn">
-                    <button class="dropbtn">Moje konto
-                    </button>
-                    <button class="dropbtn">Zaloguj
-                    </button>
-                    <button class="dropbtn">Mój koszyk
-                    </button>
-                
-                    </div>
+                        <div class="dropdown">Moje konto</div>
+                        <div class="dropdown">Zaloguj</div>
+                        <div class="dropdown">Mój koszyk</div>
+                   
                     <div class = "header-text">
                     "KUPUJMY KSIĄŻKI!"
                    
@@ -118,49 +113,24 @@ componentDidMount() {
                 </div>
 
                 <div class="navbar">
-                    <a href="#home">Home</a>
-                    <a href="#news">News</a>
+                    {/* <a href="#home">Home</a>
+                    <a href="#news">News</a> */}
 
-                            <div class="dropdown">
-                                <button class="dropbtn">Szachy 
-                                </button>
-                                
-                            </div>
+                    <div class="dropdown">Szachy</div>
 
-                            <div class="dropdown">
-                                <button class="dropbtn">Dramat
-                                </button>
-                                                                 
-                                  
-                            </div>
+                    <div class="dropdown">Dramat</div>
 
-                            <div class="dropdown">
-                                <button class="dropbtn">Historia
-                                </button>
-                            </div>
+                    <div class="dropdown">Historia</div>
 
-                            <div class="dropdown">
-                                <button class="dropbtn">Gotowanie
-                                </button>
-                            </div>
+                    <div class="dropdown">Gotowanie</div>
                             
-                            <div class="dropdown">
-                                <button class="dropbtn">Romans
-                                </button>
-                            </div>
+                    <div class="dropdown">Romans</div>
 
-                            <div class="dropdown">
-                                <button class="dropbtn">Sci-Fi
-                                </button>
-                            </div>
+                    <div class="dropdown">Sci-Fi</div>
 
-                            <div class="dropdown">
-                                <button class="dropbtn">Dramat
-                                </button>
-                                  
-                                    
-                            </div>
-                            </div>
+                    <div class="dropdown">Dramat </div>
+
+                </div>
                             <div class = "result"> 
                             {this.renderChessList()}   
                             {this.renderDramatList()}  
